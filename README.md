@@ -22,3 +22,17 @@ _«хорошо»_
 _«отлично»_
 
 Для передачи входного параметра (строки) для этой функции используйте один из фреймворков на выбор (Django, Flask, Tornado, Eve). Т.е. это должен быть небольшой сервер, который понимает GET (или POST) запрос и запускает на выполнение функцию, описанную выше.
+
+## How to
+
+Запуск сервера:
+
+```sh
+env FLASK_APP=main.py flask run
+```
+
+POST запрос на `/count`:
+
+```sh
+curl -d '"hello my friend"' -H "Content-Type: application/json" -X POST http://localhost:5000/count
+```
